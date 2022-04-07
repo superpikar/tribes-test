@@ -1,0 +1,19 @@
+columnSuffix: gfsjyvmb
+contentColumnType: text
+fieldGroup: e3675fcb-bfe6-4b0f-bad2-80f8c81f46c3 # Common
+handle: jobtitle
+instructions: ''
+name: Jobtitle
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

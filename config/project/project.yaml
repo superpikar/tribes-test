@@ -1,13 +1,30 @@
-dateModified: 1649312629
+dateModified: 1649346608
 email:
   fromEmail: dzulfikar.adiputra@gmail.com
   fromName: 'Tribes Test'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    2cfbbc67-9311-421a-894e-d98a112deda5: Jobtitle # Jobtitle
+    6acc4229-7f32-40a7-a996-17d747e41f70: 'Article Photo' # Article Photo
+    9dc9699c-7f2e-41ad-a6d2-50d5baf058b4: 'People Photo' # People Photo
     14fb389a-d690-4337-8f99-f58a8082e2b5: 'Tribes Test' # Tribes Test
+    61b927dc-5dcb-42f0-8b62-3dee003be7b9: Writer # Writer
+    97f58853-5a08-41c5-a258-35ff7d6b2108: Article # Article
     9423f990-30c3-4b68-8ef4-c6e496778e9a: 'Tribes Test' # Tribes Test
+    48736d60-2172-485f-ba78-6cacd401ca88: People # People
+    50066c87-0105-4036-8e33-f4ed71a1cea5: Default # Default
+    b0e2c0b6-9c3e-4885-9514-f5d5092deea7: Default # Default
+    b1e248b2-0466-4a6f-a35a-5e32249f00b7: 'Article Category' # Article Category
+    d035974d-1320-46eb-ab84-86256088f40f: Body # Body
+    d97b0887-4ef6-4dac-a400-4147cf63020c: Image # Image
+    e7e3551d-cfe4-47ab-bf07-09e52cf164ba: 'Article Category' # Article Category
     e3675fcb-bfe6-4b0f-bad2-80f8c81f46c3: Common # Common
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: solo
   live: true

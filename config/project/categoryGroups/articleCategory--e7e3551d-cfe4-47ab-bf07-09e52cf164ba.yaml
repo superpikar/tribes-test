@@ -1,0 +1,41 @@
+defaultPlacement: end
+fieldLayouts:
+  02c9e5b6-cd36-4292-9350-8c15613675e1:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: articleCategory
+name: 'Article Category'
+siteSettings:
+  9423f990-30c3-4b68-8ef4-c6e496778e9a: # Tribes Test
+    hasUrls: true
+    template: null
+    uriFormat: 'article-category/{slug}'
+structure:
+  maxLevels: null
+  uid: 43359a67-611d-4756-b5fc-8f55b0db79c8

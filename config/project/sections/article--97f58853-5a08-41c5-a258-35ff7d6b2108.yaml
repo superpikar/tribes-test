@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: false
+handle: article
+name: Article
+propagationMethod: all
+siteSettings:
+  9423f990-30c3-4b68-8ef4-c6e496778e9a: # Tribes Test
+    enabledByDefault: true
+    hasUrls: true
+    template: article/_entry
+    uriFormat: 'article/{slug}'
+type: channel
