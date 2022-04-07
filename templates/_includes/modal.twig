@@ -8,7 +8,7 @@
 
 <div x-cloak class="overflow-auto fixed inset-0 z-10 items-center justify-center backdrop-blur" style="background-color: rgba(255,255,255,0.2)" x-show="isModalShown" :class="{ 'flex': isModalShown, 'hidden': !isModalShown }">
   <!--Dialog-->
-  <div class="{{ class }} modal-content text-white w-11/12 md:w-3/4 mx-auto rounded-xl shadow p-6 sm:p-12 my-6" x-show="isModalShown" @click.away="closeModal()" style="background-color: #354159;">
+  <div class="{{ class }} modal-content text-white w-11/12 md:w-3/4 mx-auto rounded-xl shadow p-6 sm:p-12 my-6" x-show="isModalShown" @click.away="closeModal()" style="background-color: #354159;" data-sal="fade" data-sal-delay="100" data-sal-duration="400">
     {% block modalContent %}
     {% endblock %}
   </div>

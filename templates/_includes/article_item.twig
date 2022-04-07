@@ -1,3 +1,4 @@
+{% set key = key|default(0) %}
 {% set class = class|default('w-full') %}
 {% set item = item|default(null) %}
 
@@ -5,8 +6,8 @@
 {% set writerImageUrl = item.writer[0].peoplePhoto[0].url ?? '/assets/images/spiderman.jpg' %}
 
 {% if item %}
-  <div class="rounded-lg overflow-hidden cursor-pointer flex flex-col {{ class }}">
-    <img src="{{ imageUrl }}" class="object-cover w-full h-48">
+  <div class="rounded-lg overflow-hidden cursor-pointer flex flex-col {{ class }}" data-sal="slide-up" data-sal-delay="{{ (key+1)*150 }}" data-sal-duration="800">
+    <img data-src="{{ imageUrl }}" class="lazy object-cover w-full h-48">
     <div class="bg-white p-6 flex-1 flex flex-col justify-between">
       <div>
         <span class="text-md text-indigo-600">{{ item.articleCategory[0].title }}</span>

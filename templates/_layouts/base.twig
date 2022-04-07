@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/sal.js@0.8.2/dist/sal.css">
   <style>
     body {
       background: #2DAF90;
@@ -27,11 +28,20 @@
     }
   </style>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  {% block head %}{% endblock %}
 </head>
 <body class="">
   <div class="container mx-auto px-4 md:px-8 pb-32">
     {% block content %}{% endblock %}
   </div>
+  <script src="https://unpkg.com/sal.js@0.8.2/dist/sal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>
+  <script>
+    let salInstance = sal({
+      once: false,
+    });
+    let lazyInstance = new LazyLoad({
+      // Your custom settings go here
+    });
+  </script>
 </body>
 </html>

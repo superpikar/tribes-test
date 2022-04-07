@@ -7,12 +7,12 @@
 
 {% block content %}
   <div class="mt-36">
-    <h1 class="text-4xl text-center text-white">
+    <h1 class="text-4xl text-center text-white" data-sal="slide-down" data-sal-delay="100" data-sal-duration="800">
       Tribes.work job application test
     </h1>
     <div class="mt-12 flex -mx-4 justify-center">
       {% for item in buttons %}
-        <a class="px-12 py-4 bg-{{ item.color }}-700 hover:bg-{{ item.color }}-800 text-white rounded mx-4 text-xl" href="{{ url(item.url) }}">
+        <a class="px-12 py-4 bg-{{ item.color }}-700 hover:bg-{{ item.color }}-800 text-white rounded mx-4 text-xl" href="{{ url(item.url) }}"  data-sal="slide-up" data-sal-delay="{{ loop.index * 200 }}" data-sal-duration="800">
           {{ item.label }}
         </a>
       {% endfor %}

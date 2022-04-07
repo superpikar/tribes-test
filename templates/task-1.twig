@@ -13,14 +13,17 @@
 
 {% block content %}
   <div class="text-white mt-12 sm:mt-32">
-    <h1 class="text-3xl font-bold">
-      Events
-    </h1>
-    <p class="text-md mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.</p>
+    <div data-sal="slide-down" data-sal-delay="100" data-sal-duration="800">
+      <h1 class="text-3xl font-bold">
+        Events
+      </h1>
+      <p class="text-md mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.</p>
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 sm:mt-16">
       {% for item in articles %}
         {% include "_includes/article_item.twig" with {
+          key: loop.index0,
           item: item,
         } %}
       {% endfor %}

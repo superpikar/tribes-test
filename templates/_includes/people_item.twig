@@ -3,8 +3,8 @@
 {% set item = item|default(null) %}
 
 {% if item %}
-  <div class="people-item cursor-pointer rounded-lg p-6 border border-transparent flex align-items-center {{ class }}" @click="showModal({{ key }})">
-    <img src="{{ item.imageUrl }}" class="rounded-full h-32 w-32 mr-10 object-cover"/>
+  <div class="people-item cursor-pointer rounded-lg p-6 border border-transparent flex align-items-center {{ class }}" @click="showModal({{ key }})" data-sal="slide-up" data-sal-delay="{{ (key+1)*150 }}" data-sal-duration="800">
+    <img data-src="{{ item.imageUrl }}" class="lazy rounded-full h-32 w-32 mr-10 object-cover"/>
     <div class="text-white self-center">
       <p class="text-lg">{{ item.title }}</p>
       <span class="">{{ item.jobtitle }}</span>

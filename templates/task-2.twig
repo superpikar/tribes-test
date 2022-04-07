@@ -23,16 +23,16 @@
 %}
 {% block content %}
   <div class="text-white mt-12 sm:mt-36" x-data="alpine_task2()">
-    <h1 class="text-4xl">
+    <h1 class="text-4xl" data-sal="slide-down" data-sal-delay="100" data-sal-duration="800">
       Our Teachers
     </h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 sm:mt-16">
       {% for item in peoples %}
         {% include "_includes/people_item.twig" with {
+          key: loop.index0,
           item: item,
           class: 'md:mx-8',
-          key: loop.index0,
         } %}
       {% endfor %}
     </div>
@@ -46,12 +46,12 @@
       {% block modalContent %}
         <template x-if="currentData!=null">
           <div class="text-center sm:text-left">
-            <h2 class="text-4xl" x-text="currentData.jobtitle"></h2>
+            <h2 class="text-4xl" x-text="currentData.jobtitle" data-sal="slide-up" data-sal-delay="300" data-sal-duration="800"></h2>
             <div class="flex flex-wrap mt-4 sm:mt-12">
-              <div class="w-3/4 mx-auto sm:mx-0 sm:w-48">
+              <div class="w-3/4 mx-auto sm:mx-0 sm:w-48" data-sal="slide-fade" data-sal-delay="400" data-sal-duration="800">
                 <img :src="currentData.imageUrl" class="w-full" />
               </div>
-              <div class="flex-1 sm:ml-8">
+              <div class="flex-1 sm:ml-8" data-sal="slide-down" data-sal-delay="500" data-sal-duration="800">
                 <p x-text="currentData.title" class="text-2xl mt-8 sm:mt-0"></p>
                 <p x-html="currentData.body" class="mt-4 sm:mt-8"></p>
               </div>
@@ -73,6 +73,9 @@
       showModal(index) {
         this.isModalShown = true;
         this.currentData = entries[index] ?? null;
+        this.$nextTick(() => {
+          salInstance.enable();
+        });
       },
       closeModal() {
         this.isModalShown = false;
