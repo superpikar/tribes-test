@@ -1,0 +1,22 @@
+dateModified: 1649312629
+email:
+  fromEmail: dzulfikar.adiputra@gmail.com
+  fromName: 'Tribes Test'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    14fb389a-d690-4337-8f99-f58a8082e2b5: 'Tribes Test' # Tribes Test
+    9423f990-30c3-4b68-8ef4-c6e496778e9a: 'Tribes Test' # Tribes Test
+    e3675fcb-bfe6-4b0f-bad2-80f8c81f46c3: Common # Common
+system:
+  edition: solo
+  live: true
+  name: 'Tribes Test'
+  schemaVersion: 3.7.33
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
