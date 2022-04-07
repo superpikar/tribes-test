@@ -1,0 +1,30 @@
+{% extends "_layouts/base.twig" %}
+
+{% css %}
+  .people-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(184, 184, 184, 1);
+  }
+{% endcss %}
+
+{% block content %}
+  <div class="text-white mt-36">
+    <h1 class="text-4xl">
+      Our Teachers
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+      {% for item in [1, 2, 3, 4, 5, 6] %}
+        {% include "_includes/people_item.twig" with {
+          item: null,
+          class: 'mx-8'
+        } %}
+      {% endfor %}
+    </div>
+    <div class="text-center mt-24">
+      <a class="px-8 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded" href="#">
+        View More
+      </a>
+    </div>
+  </div>
+{% endblock %}
