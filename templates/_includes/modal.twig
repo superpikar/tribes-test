@@ -1,0 +1,9 @@
+{% set class = class|default('bg-white') %}
+
+<div class="overflow-auto absolute inset-0 z-10 items-center justify-center" style="background-color: rgba(0,0,0,0.5)" x-show="isModalShown" :class="{ 'flex': isModalShown, 'hidden': !isModalShown }">
+  <!--Dialog-->
+  <div class="{{ class }} w-3/4 md:max-w-md mx-auto rounded shadow p-12" x-show="isModalShown" @click.away="closeModal()">
+    {% block modalContent %}
+    {% endblock %}
+  </div>
+</div>
