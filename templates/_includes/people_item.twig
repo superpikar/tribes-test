@@ -4,7 +4,7 @@
 
 {% if item %}
   <div class="people-item cursor-pointer rounded-lg p-6 border border-transparent flex align-items-center {{ class }}" @click="showModal({{ key }})">
-    <img src="{{ item.imageUrl }}" class="rounded-full h-32 w-32 mr-10" />
+    <img src="{{ item.imageUrl }}" class="rounded-full h-32 w-32 mr-10 object-cover"/>
     <div class="text-white self-center">
       <p class="text-lg">{{ item.title }}</p>
       <span class="">{{ item.jobtitle }}</span>

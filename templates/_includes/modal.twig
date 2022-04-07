@@ -1,8 +1,14 @@
 {% set class = class|default('') %}
 
-<div class="overflow-auto absolute inset-0 z-10 items-center justify-center" style="background-color: rgba(0,0,0,0.5)" x-show="isModalShown" :class="{ 'flex': isModalShown, 'hidden': !isModalShown }">
+{% css %}
+  .modal-content p {
+    margin-bottom: 1rem !important;
+  }
+{% endcss %}
+
+<div x-cloak class="overflow-auto fixed inset-0 z-10 items-center justify-center backdrop-blur" style="background-color: rgba(255,255,255,0.2)" x-show="isModalShown" :class="{ 'flex': isModalShown, 'hidden': !isModalShown }">
   <!--Dialog-->
-  <div class="{{ class }} text-white w-3/4 mx-auto rounded-xl shadow p-12" x-show="isModalShown" @click.away="closeModal()" style="background-color: #354159;">
+  <div class="{{ class }} modal-content text-white w-11/12 md:w-3/4 mx-auto rounded-xl shadow p-6 sm:p-12 my-6" x-show="isModalShown" @click.away="closeModal()" style="background-color: #354159;">
     {% block modalContent %}
     {% endblock %}
   </div>

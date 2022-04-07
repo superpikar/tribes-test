@@ -1,7 +1,21 @@
 {% extends "_layouts/base.twig" %}
 
+{% set buttons = [
+  { color: 'gray', label: 'Article Cards', url: 'task-1' },
+  { color: 'indigo', label: 'People List', url: 'task-2' },
+] %}
+
 {% block content %}
-  <h1 class="text-3xl font-bold underline">
-    Homepage!
-  </h1>
+  <div class="mt-36">
+    <h1 class="text-4xl text-center text-white">
+      Tribes.work job application test
+    </h1>
+    <div class="mt-12 flex -mx-4 justify-center">
+      {% for item in buttons %}
+        <a class="px-12 py-4 bg-{{ item.color }}-700 hover:bg-{{ item.color }}-800 text-white rounded mx-4 text-xl" href="{{ url(item.url) }}">
+          {{ item.label }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
 {% endblock %}

@@ -2,7 +2,7 @@
 {% set item = item|default(null) %}
 
 {% set imageUrl = item.articlePhoto[0].url ?? '/assets/images/pexels-fauxels-3184306.jpg' %}
-{% set writerImageUrl = item.writer[0].peoplePhoto[0].url ?? '/assets/images/Trudeau_visit_White_House_for_USMCA_(cropped).jpg' %}
+{% set writerImageUrl = item.writer[0].peoplePhoto[0].url ?? '/assets/images/spiderman.jpg' %}
 
 {% if item %}
   <div class="rounded-lg overflow-hidden cursor-pointer flex flex-col {{ class }}">
@@ -12,7 +12,7 @@
         <span class="text-md text-indigo-600">{{ item.articleCategory[0].title }}</span>
         <p class="text-lg text-gray-900">{{ item.title }}</p>
         <div class="text-gray-500 mt-4">
-          {{ item.body|raw }}
+          {{ item.body| chop(limit=25, unit='w') }} ...
         </div>
       </div>
       <div class="flex mt-8">
